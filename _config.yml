@@ -25,7 +25,6 @@ sass:
   sass_dir: _sass
   style: compressed
 permalink: "/article/:title"
-markdown: redcarpet
 gems:
   - jekyll-paginate
   - github-pages
