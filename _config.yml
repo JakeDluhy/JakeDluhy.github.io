@@ -1,34 +1,30 @@
 # Site settings
-title: Jekyll-materialize
+title: Sustayn
 description: > # this means to ignore newlines until "baseurl:"
-    Write an awesome description for your new site here. You can edit this
-    line in _config.yml. It will appear in your document head meta (for
-    Google search results) and in your feed.xml site description.
-url: "http://yourdomain.com"
+  Sustayn rescues great food from being thrown out and 
+  connects it with good homes that want to eat it! 
+  Sustayn your health, your planet, and your community
+url: "http://sustayn.io"
 baseurl: ""
-logo: jekyll-<b>materialize</b>
+logo: <div class="logo-container"><img src="/assets/images/sustayn-no-background.svg" class="logo-image"><span class="light white-text logo-text">sustayn</span></div>
 paginate: 5
-paginate_path: "/page:num/"
+paginate_path: "blog/page:num/"
 owner:
-    email: ichihara.rifa@gmail.com
-    facebook:
-        show: true
-        name: "Ichihara Rifa"
-        url: "https://fb.me/nasya.aidan"
-    github:
-        show: true
-        username: "riefachan"
-    twitter:
-        show: false
-        username: ""
-    disqus:
-        show: true
-        username: "ichihararifa"
+  email: jake@sustayn.io
+  facebook:
+    show: true
+    name: "Sustayn"
+    url: "https://fb.me/sustayn"
+  instagram:
+    show: true
+    username: "sustaynablefood"
+  twitter:
+    show: true
+    username: "sustaynablefood"
 sass:
-    sass_dir: _sass
-    style: compressed
+  sass_dir: _sass
+  style: compressed
 permalink: "/article/:title"
 markdown: redcarpet
-highlighter: pygments
 gems:
-    - jekyll-feed
+  - jekyll-paginate

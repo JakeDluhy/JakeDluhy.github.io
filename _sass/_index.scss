@@ -1,0 +1,105 @@
+.frontpage p {
+  font-size: 16px;
+  font-weight: 300;
+}
+.splash-section {
+  background: url('/assets/images/goodfood.jpeg') no-repeat center center;
+  position: relative;
+  padding: 0;
+  .opacity-shield {
+    padding: 50px 0;
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+}
+
+.mailchimp-signup {
+  width: 70%;
+  margin: 0 auto;
+  #mce-EMAIL {
+    box-shadow: none;
+    box-sizing: border-box;
+    padding: 0 10px;
+
+    border: none;
+    background: white;
+  }
+}
+.btn-wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+.hero-header {
+  font-size: 40px;
+
+  margin-bottom: 40px;
+}
+.stat-info-wrapper {
+  display: flex;
+
+  justify-content: center;
+}
+.stat-info {
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+}
+.stat-display {
+  font-size: 36px;
+
+  display: block;
+
+  white-space: nowrap;
+}
+.stat-text {
+  margin: 0 auto;
+}
+.food-icons {
+  width: 100%;
+
+  text-align: center;
+  i {
+    font-size: 32px;
+  }
+}
+.food-pounds-stat {
+  margin-top: 35px;
+}
+.garbage-stat-info {
+  padding-right: 10px;
+  padding-left: 10px;
+  background: url('/assets/images/garbage.jpg') no-repeat center bottom;
+}
+.people-icons {
+  width: 100%;
+
+  text-align: center;
+  padding: 2px 0;
+  i {
+    font-size: 28px;
+  }
+}
+
+.edification {
+  padding: 50px 0;
+  .edify-title {
+    margin-top: 0;
+  }
+}
+.explanation-container {
+  display: flex;
+  align-items: center;
+  margin-bottom: 30px;
+}
+.explanation-icon {
+  font-size: 72px;
+  &.left-margin {
+    margin-left: 30px;
+  }
+  &.right-margin {
+    margin-right: 30px;
+  }
+}
+
+.input-field label.bottom-signup {
+  left: 0;
+}

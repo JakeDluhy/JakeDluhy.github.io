@@ -1,64 +1,160 @@
 ---
 layout: default
 ---
-<div class="container">
-    <div class="group-article">
-        <div class="row no-margin">
-            <div class="col s12">
-                <h2 class="blue-text center-align thin">Recent Post</h2>
-                <div class="divider"></div>
-            </div>
-        </div>
-        
-        {% for post in paginator.posts %}
-        <div class="row no-margin">
-            <a class="waves-effect" href="{{ post.url | prepend: site.baseurl }}">
-                <div class="col s12">
-                    <div class="list-article">
-                        <h4 class="blue-text thin">{{ post.title }}</h4>
-                        <p class="grey-text text-darken-1 light">Published at {{ post.date | date: "%B %-d, %Y" }}.</p>
-                        <article class="grey-text text-darken-2 post-content on-index light">
-                                {{ post.excerpt | strip_html }}. . 
-                        </article>
-                        <br/>
-                    </div>
-                    <div class="divider dashed"></div>
+<div class="frontpage">
+  <div class="section splash-section">
+    <div class="opacity-shield">
+      <h4 class="hero-header center-align white-text">Amazing food doesn't have to break the bank</h4>
+      <div class="row">
+        <div class="col s12 m4 offset-m4">
+          <p class="center-align white-text">
+            We're rescuing great food from being chucked and getting it to you at discounted prices. If you're intereted in learning more join our mailing list!
+          </p>
+          <div class="mailchimp-signup">
+            <!-- Begin MailChimp Signup Form -->
+            <div id="mc_embed_signup">
+            <form action="//sustayn.us12.list-manage.com/subscribe/post?u=dda607170b72014ae5352ce6c&amp;id=d96f2a0927" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+              <div id="mc_embed_signup_scroll">
+                <div class="mc-field-group">
+                  <input type="email" placeholder="Email" value="" name="EMAIL" class="required email" id="mce-EMAIL">
                 </div>
-            </a>
+                <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+                <div style="position: absolute; left: -5000px;" aria-hidden="true">
+                  <input type="text" name="b_dda607170b72014ae5352ce6c_d96f2a0927" tabindex="-1" value="">
+                </div>
+                <div class="clear btn-wrapper">
+                  <input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="btn green darken-3">
+                </div>
+              </div>
+            </form>
+            </div>
+            <!--End mc_embed_signup-->
+          </div>
         </div>
-        {% endfor %}
-
+      </div>  
     </div>
-
+  </div>
+  <div class="container">
     <div class="section">
-
-        {% if paginator.total_pages > 1 %}
-            <ul class="pagination center-align">
-
-                {% if paginator.previous_page %}
-                    <li class="waves-effect blue lighten-2"><a class="white-text" href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">&laquo; Prev</a></li>
-                {% else %}
-                    <li class="waves-effect disabled blue lighten-2"><a class="white-text" href="#">&laquo; Prev</a></li>
-                {% endif %}
-
-                {% for page in (1..paginator.total_pages) %}
-                    {% if page == paginator.page %}
-                        <li class="waves-effect active blue"><a href="#">{{ page }}</a></li>
-                    {% elsif page == 1 %}
-                        <li class="waves-effect blue lighten-2"><a class="white-text" href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">{{ page }}</a></li>
-                    {% else %}
-                        <li class="waves-effect blue lighten-2"><a class="white-text" href="{{ site.paginate_path | prepend: site.baseurl | replace: '//', '/' | replace: ':num', page }}">{{ page }}</a></li>
-                    {% endif %}
-                {% endfor %}
-
-                {% if paginator.next_page %}
-                    <li class="waves-effect blue lighten-2"><a class="white-text" href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}">Next &raquo;</a></li>
-                {% else %}
-                    <li class="waves-effect disabled blue lighten-2"><a class="white-text" href="#">Next &raquo;</a></li>
-                {% endif %}
-
-            </ul>
-        {% endif %}
-
+      <h4 class="hero-header center-align">Did you know?</h4>
+      <div class="row">
+        <div class="col s12 m4 stat-info-wrapper valign-wrapper">
+          <div class="stat-info valign">
+            <span class="stat-display center-align">40%</span>
+            <div class="food-icons">
+              <i class="mdi mdi-barley"></i>
+              <i class="mdi mdi-barley"></i>
+              <i class="mdi mdi-barley deep-orange-text darken-2"></i>
+              <i class="mdi mdi-barley"></i>
+              <i class="mdi mdi-barley deep-orange-text darken-2"></i>
+            </div>
+            <p class="stat-text center-align"> of food produced in the US goes uneaten</p>
+          </div>
+        </div>
+        <div class="col s12 m4 stat-info-wrapper valign-wrapper">
+          <div class="stat-info garbage-stat-info valign">
+            <span class="stat-display center-align">43 billion</span>
+            <p class="stat-text center-align food-pounds-stat white-text"> pounds of food is thrown out from supermarkets</p>
+          </div>
+        </div>
+        <div class="col s12 m4 stat-info-wrapper valign-wrapper">
+          <div class="stat-info valign">
+            <span class="stat-display center-align">1 in 6</span>
+            <div class="people-icons">
+              <i class="mdi mdi-account"></i>
+              <i class="mdi mdi-account"></i>
+              <i class="mdi mdi-account deep-orange-text darken-2"></i>
+              <i class="mdi mdi-account"></i>
+              <i class="mdi mdi-account"></i>
+              <i class="mdi mdi-account"></i>
+            </div>
+            <p class="stat-text center-align"> Americans face food insecurity</p>
+          </div>
+        </div>
+      </div>
     </div>
+  </div>
+
+  <div class="section edification grey lighten-2">
+    <div class="container">
+      <h4 class="edify-title">but...</h4>
+      <p>
+        Most food thrown out from grocery stores is still perfectly edible! Sometimes an avocado in a bag has been spoiled and the whole bag goes. Occasionally produce pack sizes are just too big to sell everything. And confusing sell-by dates turn consumers off from buying older items.
+      </p>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="section">
+      <h4 class="hero-header center-align">How it works</h4>
+      <div class="explanation-container">
+        <i class="mdi mdi-food-apple explanation-icon right-margin"></i>
+        <p>
+          Stores list food items that may be partially damaged, ugly, or close approaching the sell by dates at severely discounted rates
+        </p>
+      </div>
+      <div class="explanation-container">
+        <p>
+          You favorite your closest stores, and we give you a list of great food available at those stores right now
+        </p>
+        <i class="mdi mdi-map-marker-multiple explanation-icon left-margin"></i>
+      </div>
+      <div class="explanation-container">
+        <i class="mdi mdi-food-variant explanation-icon right-margin"></i>
+        <p>
+          Order online, and pick up your food items in the store. Cook an awesome meal, and be sure to tell us all about it!
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <div class="section grey lighten-2">
+    <div class="container">
+      <h4 class="hero-header center-align">Sound like a win-win-win?</h4>
+      <p>
+        We think so! We're hard at work getting everything lined up to make sure you have access to the best food at super low prices. If you're interested, sign up for our mailing list to stay up to date.
+      </p>
+      <div class="row">
+        <div class="col s12 m6 offset-m3">
+          <!-- Begin MailChimp Signup Form -->
+          <div id="mc_embed_signup">
+          <form action="//sustayn.us12.list-manage.com/subscribe/post?u=dda607170b72014ae5352ce6c&amp;id=d96f2a0927" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+            <div id="mc_embed_signup_scroll">
+              <div class="mc-field-group input-field">
+                <input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL2">
+                <label for="mce-EMAIL2" class="bottom-signup">Email</label>
+              </div>
+              <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+              <div style="position: absolute; left: -5000px;" aria-hidden="true">
+                <input type="text" name="b_dda607170b72014ae5352ce6c_d96f2a0927" tabindex="-1" value="">
+              </div>
+              <div class="clear btn-wrapper">
+                <input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="btn green darken-3">
+              </div>
+            </div>
+          </form>
+          </div>
+          <!--End mc_embed_signup-->
+        </div>
+      </div>
+      <p>
+        Are you a grocery store, restaurant, or small business looking to go to zero waste? We're super excited to start working together - reach out to us at <a href="mailto:contact@sustayn.io">contact@sustayn.io</a> and let's talk!
+      </p>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="container">
+      <h4 class="hero-header center-align">Learn More</h4>
+      <p>
+        These facts were sourced from the amazing <a href="https://www.nrdc.org/food/files/wasted-food-ip.pdf" target="_blank">National Resource Defense Councial paper</a> on food waste in America. If you want to learn more about waste in our food system that's a great place to start.
+      </p>
+      <p>
+        We also used information gathered from the documentary <a href="http://www.divethefilm.com/default.aspx" target="_blank">Dive!</a>, which is a great way to see the amount of food thrown out from supermarkets every day.
+      </p>
+      <p>
+        And be sure to check out our <a href="{{ '/blog/' | prepend: site.baseurl }}">blog</a>, where we'll be publishing facts and research about our broken food system.
+      </p>
+    </div>
+  </div>
 </div>

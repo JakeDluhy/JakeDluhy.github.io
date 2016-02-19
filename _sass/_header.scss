@@ -1,0 +1,16 @@
+.brand-logo {
+  height: 100%;
+}
+nav .hamburger-icon {
+  position: absolute;
+  right: 10px;
+}
+.side-nav .side-nav-item {
+  padding: 0;
+  .side-nav-link {
+    font-size: 16px;
+    i {
+      margin-right: 6px;
+    }
+  }
+}

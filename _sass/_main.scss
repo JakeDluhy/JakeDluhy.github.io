@@ -1,0 +1,150 @@
+body {
+  display: flex;
+  flex-direction: column;
+
+  min-height: 100vh;
+}
+main {
+  flex: 1 0 auto;
+}
+.container {
+  width: 80%;
+  max-width: 1280px;
+  margin: 0 auto;
+}
+@media #{$medium-and-up} {
+  .container {
+    width: 75%;
+  }
+}
+@media #{$large-and-up} {
+  .container {
+    width: 60%;
+  }
+}
+.no-margin {
+  margin: 0;
+  &.__top {
+    margin-top: 0;
+  }
+  &.__bottom {
+    margin-bottom: 0;
+  }
+  &.__left {
+    margin-left: 0;
+  }
+  &.__right {
+    margin-right: 0;
+  }
+}
+.divider {
+  border-bottom: 2px solid rgba(0, 39, 59, .08);
+  background: transparent;
+  &.dashed {
+    width: 50%;
+    margin: auto;
+
+    transform: scale(1,.1);
+
+    border-bottom: 8px dashed #a9a9a9;
+  }
+}
+.group-article .row:last-child .divider {
+  display: none;
+}
+.card {
+  border-radius: 0;
+}
+nav .brand-logo {
+  font-size: 1.5rem;
+
+  position: absolute;
+
+  display: inline-block;
+
+  padding: 0;
+  padding-right: 10px;
+  padding-left: 10px;
+
+  white-space: nowrap;
+
+  color: #fff;
+}
+article {
+  font-size: 1.35rem;
+  font-weight: 300;
+  line-height: 1.7;
+
+  padding: 10px;
+  &.post-content {
+    ul {
+      margin-left: 20px;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      font-weight: 200;
+    }
+    li {
+      list-style-type: disc;
+    }
+    &.on-index {
+      font-size: 17px;
+      line-height: 1.5;
+
+      padding: 0;
+    }
+  }
+}
+.list-article {
+  padding: 20px;
+}
+footer.page-footer {
+  font-size: 13px;
+  font-weight: 400;
+  font-style: normal;
+  line-height: 1.5;
+
+  letter-spacing: -.003em;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+  color: #333;
+}
+
+$form-color: #2e7d32;
+/* label focus color */
+.input-field input[type=text]:focus + label, .input-field input[type=email]:focus + label {
+  color: $form-color;
+}
+/* label underline focus color */
+.input-field input[type=text]:focus, .input-field input[type=email]:focus {
+  border-bottom: 1px solid $form-color;
+  box-shadow: 0 1px 0 0 $form-color;
+}
+/* icon prefix focus color */
+.input-field .prefix.active {
+  color: $form-color;
+}
+
+/** Logo styles */
+.logo-container {
+  display: flex;
+
+  height: 100%;
+
+  align-items: center;
+  .logo-image {
+    height: 100%;
+  }
+  .logo-text {
+    font-family: 'Quicksand', 'Roboto', 'sans-serif';
+    font-size: 32px;
+
+    margin-left: 10px;
+  }
+}
+
+
+/** Justify Posts */
+.post-content p {
+  text-align: justify;
+}

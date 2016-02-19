@@ -1,25 +1,23 @@
 <div class="navbar-fixed">
-<nav class="white blue-text z-depth-0">
+<nav class="green darken-3 white-text z-depth-0">
     <ul id="slide-out" class="side-nav">
-        <li><a href="{{ site.baseurl }}/" class="blue-text">Home</a></li>
+        <li class="side-nav-item"><a href="{{ site.baseurl }}/" class="side-nav-link"><i class="mdi mdi-home"></i>Home</a></li>
         {% for page in site.pages %}
             {% if page.title %}
-                <li><a href="{{ page.url | prepend: site.baseurl }}" class="blue-text">{{ page.title }}</a></li>
+                <li class="side-nav-item"><a href="{{ page.url | prepend: site.baseurl }}" class="side-nav-link"><i class="mdi mdi-{{page.icon}}"></i>{{ page.title }}</a></li>
             {% endif %}
         {% endfor %}
-        <li><a href="{{ "/feed.xml" | prepend: site.baseurl }}" class="blue-text">Feed</a></li>
     </ul>
     <div class="container container-large">
-    <a class="brand-logo" href="{{ site.baseurl }}/" class="blue-text"><span class="light blue-text">{{ site.logo }}</span></a>
+    <a class="brand-logo" href="{{ site.baseurl }}/" class="white-text">{{ site.logo }}</a>
     <ul class="right hide-on-med-and-down">
         {% for page in site.pages %}
             {% if page.title %}
-                <li><a href="{{ page.url | prepend: site.baseurl }}" class="blue-text">{{ page.title }}</a></li>
+                <li><a href="{{ page.url | prepend: site.baseurl }}" class="white-text">{{ page.title }}</a></li>
             {% endif %}
         {% endfor %}
-        <li><a href="{{ "/feed.xml" | prepend: site.baseurl }}" class="blue-text">Feed</a></li>
     </ul>
-    <a href="#" data-activates="slide-out" class="button-collapse right blue-text"><i class="material-icons">menu</i></a>
+    <a href="#" data-activates="slide-out" class="hamburger-icon button-collapse right white-text"><i class="mdi mdi-menu"></i></a>
     </div>
 </nav>
 </div>
