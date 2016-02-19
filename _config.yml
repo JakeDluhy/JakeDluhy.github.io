@@ -5,7 +5,7 @@ description: > # this means to ignore newlines until "baseurl:"
   connects it with good homes that want to eat it! 
   Sustayn your health, your planet, and your community
 url: "http://sustayn.io"
-baseurl: "https://github.com/sustayn/sustayn.github.io"
+baseurl: "https://sustayn.github.io"
 logo: <div class="logo-container"><img src="/assets/images/sustayn-no-background.svg" class="logo-image"><span class="light white-text logo-text">sustayn</span></div>
 paginate: 5
 paginate_path: "blog/page:num/"
