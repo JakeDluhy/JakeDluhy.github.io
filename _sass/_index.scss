@@ -89,14 +89,15 @@
   display: flex;
   align-items: center;
   margin-bottom: 30px;
+  max-width: 100%;
 }
 .explanation-icon {
   font-size: 72px;
   &.left-margin {
-    margin-left: 30px;
+    padding-left: 30px;
   }
   &.right-margin {
-    margin-right: 30px;
+    padding-right: 30px;
   }
 }
 
