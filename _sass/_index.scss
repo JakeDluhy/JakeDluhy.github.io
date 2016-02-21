@@ -107,7 +107,7 @@
     margin-right: 30px;
   }
 }
-@media handheld {
+@media only screen and (max-device-width: 740px) {
   .explanation-icon {
     width: 100%;
   }
