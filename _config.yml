@@ -27,4 +27,4 @@ sass:
 permalink: "/article/:title"
 gems:
   - jekyll-paginate
-  - github-pages
+

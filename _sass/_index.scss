@@ -3,12 +3,15 @@
   font-weight: 300;
 }
 .splash-section {
-  background: url('/assets/images/goodfood.jpeg') no-repeat center center;
   position: relative;
+
   padding: 0;
+
+  background: url('/assets/images/goodfood.jpeg') no-repeat center center;
   .opacity-shield {
     padding: 50px 0;
-    background-color: rgba(0, 0, 0, 0.5);
+
+    background-color: rgba(0, 0, 0, .5);
   }
 }
 
@@ -16,16 +19,17 @@
   width: 70%;
   margin: 0 auto;
   #mce-EMAIL {
-    box-shadow: none;
     box-sizing: border-box;
     padding: 0 10px;
 
     border: none;
     background: white;
+    box-shadow: none;
   }
 }
 .btn-wrapper {
   display: flex;
+
   justify-content: center;
 }
 
@@ -67,13 +71,14 @@
 .garbage-stat-info {
   padding-right: 10px;
   padding-left: 10px;
+
   background: url('/assets/images/garbage.jpg') no-repeat center bottom;
 }
 .people-icons {
   width: 100%;
+  padding: 2px 0;
 
   text-align: center;
-  padding: 2px 0;
   i {
     font-size: 28px;
   }
@@ -87,17 +92,21 @@
 }
 .explanation-container {
   display: flex;
-  align-items: center;
-  margin-bottom: 30px;
+
   max-width: 100%;
+  margin-bottom: 30px;
+
+  align-items: center;
 }
 .explanation-icon {
   font-size: 72px;
+
+  width: 72px;
   &.left-margin {
-    padding-left: 30px;
+    margin-left: 30px;
   }
   &.right-margin {
-    padding-right: 30px;
+    margin-right: 30px;
   }
 }
 
