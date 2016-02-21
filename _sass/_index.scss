@@ -100,13 +100,16 @@
 }
 .explanation-icon {
   font-size: 72px;
-
-  width: 72px;
   &.left-margin {
     margin-left: 30px;
   }
   &.right-margin {
     margin-right: 30px;
+  }
+}
+@media handheld {
+  .explanation-icon {
+    width: 100%;
   }
 }
 
