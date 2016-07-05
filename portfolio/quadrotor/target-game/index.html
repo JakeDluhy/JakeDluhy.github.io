@@ -1,0 +1,147 @@
+---
+layout: quadrotor-demo
+title: 'Quadrotor Demo'
+icon: 'library-books'
+---
+<div id="page-information" class="row">
+  <div class="instructions-wrapper">
+    <div class="instructions_val-label">Time</div>
+    <div class="instructions_val-box">
+      <div class="time-wrapper">
+        Current: <span class="time-display">0.00</span>
+      </div>
+      <div class="time-wrapper">
+        Best: <span class="best-time-display">0.00</span>
+      </div>
+    </div>
+
+    <div class="instructions_val-label">X Direction</div>
+    <div class="instructions_val-box">
+      <div class="instructions_matrix-wrapper">
+        <span class="instructions_matrix-start">Q = [</span>
+        <div class="instructions_matrix-col">
+          <input type="text" name="xdir-q11" class="xdir-q11" value="0.001">
+          <input type="text" name="xdir-q12" class="xdir-q12" value="0.00">
+        </div>
+        <div class="instructions_matrix-col">
+          <input type="text" name="xdir-q21" class="xdir-q21" value="0.00">
+          <input type="text" name="xdir-q22" class="xdir-q22" value="0.001">
+        </div>
+        <span class="instructions_matrix-end">]</span>
+      </div>
+      <div class="instructions_matrix-wrapper instructions_matrix-wrapper--double-input">
+        <span>R = </span>
+        <input type="text" name="xdir-r" class="xdir-r" value="1.00">
+      </div>
+    </div>
+
+    <div class="instructions_val-label">Y Direction</div>
+    <div class="instructions_val-box">
+      <div class="instructions_matrix-wrapper">
+        <span class="instructions_matrix-start">Q = [</span>
+        <div class="instructions_matrix-col">
+          <input type="text" name="ydir-q11" class="ydir-q11" value="0.001">
+          <input type="text" name="ydir-q12" class="ydir-q12" value="0.00">
+        </div>
+        <div class="instructions_matrix-col">
+          <input type="text" name="ydir-q21" class="ydir-q21" value="0.00">
+          <input type="text" name="ydir-q22" class="ydir-q22" value="0.001">
+        </div>
+        <span class="instructions_matrix-end">]</span>
+      </div>
+      <div class="instructions_matrix-wrapper instructions_matrix-wrapper--double-input">
+        <span>R = </span>
+        <input type="text" name="ydir-r" class="ydir-r" value="1.00">
+      </div>
+    </div>
+
+    <div class="instructions_val-label">Z Direction</div>
+    <div class="instructions_val-box">
+      <div class="instructions_matrix-wrapper">
+        <span class="instructions_matrix-start">Q = [</span>
+        <div class="instructions_matrix-col">
+          <input type="text" name="zdir-q11" class="zdir-q11" value="20.00">
+          <input type="text" name="zdir-q12" class="zdir-q12" value="0.00">
+        </div>
+        <div class="instructions_matrix-col">
+          <input type="text" name="zdir-q21" class="zdir-q21" value="0.00">
+          <input type="text" name="zdir-q22" class="zdir-q22" value="15.00">
+        </div>
+        <span class="instructions_matrix-end">]</span>
+      </div>
+      <div class="instructions_matrix-wrapper instructions_matrix-wrapper--double-input">
+        <span>R = </span>
+        <input type="text" name="zdir-r" class="zdir-r" value="1.00">
+      </div>
+    </div>
+
+    <div class="instructions_val-label">Euler1 Direction</div>
+    <div class="instructions_val-box">
+      <div class="instructions_matrix-wrapper">
+        <span class="instructions_matrix-start">Q = [</span>
+        <div class="instructions_matrix-col">
+          <input type="text" name="euler1-q11" class="euler1-q11" value="0.01">
+          <input type="text" name="euler1-q12" class="euler1-q12" value="0.00">
+        </div>
+        <div class="instructions_matrix-col">
+          <input type="text" name="euler1-q21" class="euler1-q21" value="0.00">
+          <input type="text" name="euler1-q22" class="euler1-q22" value="0.001">
+        </div>
+        <span class="instructions_matrix-end">]</span>
+      </div>
+      <div class="instructions_matrix-wrapper instructions_matrix-wrapper--double-input">
+        <span>R = </span>
+        <input type="text" name="euler1-r" class="euler1-r" value="1.00">
+      </div>
+    </div>
+
+    <div class="instructions_val-label">Euler2 Direction</div>
+    <div class="instructions_val-box">
+      <div class="instructions_matrix-wrapper">
+        <span class="instructions_matrix-start">Q = [</span>
+        <div class="instructions_matrix-col">
+          <input type="text" name="euler2-q11" class="euler2-q11" value="5.00">
+          <input type="text" name="euler2-q12" class="euler2-q12" value="0.00">
+        </div>
+        <div class="instructions_matrix-col">
+          <input type="text" name="euler2-q21" class="euler2-q21" value="0.00">
+          <input type="text" name="euler2-q22" class="euler2-q22" value="5.00">
+        </div>
+        <span class="instructions_matrix-end">]</span>
+      </div>
+      <div class="instructions_matrix-wrapper instructions_matrix-wrapper--double-input">
+        <span>R = </span>
+        <input type="text" name="euler2-r" class="euler2-r" value="1.00">
+      </div>
+    </div>
+
+    <div class="instructions_val-label">Euler3 Direction</div>
+    <div class="instructions_val-box">
+      <div class="instructions_matrix-wrapper">
+        <span class="instructions_matrix-start">Q = [</span>
+        <div class="instructions_matrix-col">
+          <input type="text" name="euler3-q11" class="euler3-q11" value="5.00">
+          <input type="text" name="euler3-q12" class="euler3-q12" value="0.00">
+        </div>
+        <div class="instructions_matrix-col">
+          <input type="text" name="euler3-q21" class="euler3-q21" value="0.00">
+          <input type="text" name="euler3-q22" class="euler3-q22" value="5.00">
+        </div>
+        <span class="instructions_matrix-end">]</span>
+      </div>
+      <div class="instructions_matrix-wrapper instructions_matrix-wrapper--double-input">
+        <span>R = </span>
+        <input type="text" name="euler3-r" class="euler3-r" value="1.00">
+      </div>
+    </div>
+
+    <button class="applyQs btn btn-primary quadrotor-btn">Apply Q's and R's</button>
+    <button class="start-button btn btn-primary quadrotor-btn">Start</button>
+    <button class="stop-button btn btn-primary quadrotor-btn">Stop</button>
+    <button class="reset-button btn btn-primary quadrotor-btn">Reset position</button>
+  </div>
+</div>
+
+<div id='target-game-quadrotor-container'></div>
+
+<script src="/assets/js/quadrotor/targetGameSetup.js"></script>

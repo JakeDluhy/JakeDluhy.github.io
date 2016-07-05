@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+{% include head.html %}
+<body>
+    <header>
+        {% include header.html %}
+    </header>
+    <main class="quadrotor-documentation">
+      {{ content }}
+    </main>
+
+    <link href='https://fonts.googleapis.com/css?family=Libre+Baskerville' rel='stylesheet' type='text/css'>
+    <script type="text/javascript" src='{{ "/assets/js/jquery.js" | prepend: site.baseurl }}'></script>
+    <script type="text/javascript" src='{{ "/assets/js/materialize.js" | prepend: site.baseurl }}'></script>
+    <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+</body>
+</html>

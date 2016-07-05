@@ -1,0 +1,126 @@
+---
+layout: quadrotor-demo
+title: 'Quadrotor Demo'
+icon: 'library-books'
+---
+<div id="page-information">
+  <div class="instructions-wrapper">
+    <div class="instructions_val-label">X Direction</div>
+    <div class="instructions_val-box">
+      <div class="instructions_matrix-wrapper">
+        <span class="instructions_matrix-start">K = [</span>
+        <input type="text" name="xk1" class="xdir-k1">
+        <input type="text" name="xk2" class="xdir-k2">
+        <span class="instructions_matrix-end">]</span>
+      </div>
+    </div>
+
+    <div class="instructions_val-label">Y Direction</div>
+    <div class="instructions_val-box">
+      <div class="instructions_matrix-wrapper">
+        <span class="instructions_matrix-start">K = [</span>
+        <input type="text" name="yk1" class="ydir-k1">
+        <input type="text" name="yk2" class="ydir-k2">
+        <span class="instructions_matrix-end">]</span>
+      </div>
+    </div>
+
+    <div class="instructions_val-label">Z Direction</div>
+    <div class="instructions_val-box">
+      <div class="instructions_matrix-wrapper">
+        <span class="instructions_matrix-start">K = [</span>
+        <input type="text" name="zk1" class="zdir-k1">
+        <input type="text" name="zk2" class="zdir-k2">
+        <span class="instructions_matrix-end">]</span>
+      </div>
+    </div>
+
+    <div class="instructions_val-label">Euler1 Direction</div>
+    <div class="instructions_val-box">
+      <div class="instructions_matrix-wrapper">
+        <span class="instructions_matrix-start">K = [</span>
+        <input type="text" name="euler1k1" class="euler1-k1">
+        <input type="text" name="euler1k2" class="euler1-k2">
+        <span class="instructions_matrix-end">]</span>
+      </div>
+    </div>
+
+    <div class="instructions_val-label">Euler2 Direction</div>
+    <div class="instructions_val-box">
+      <div class="instructions_matrix-wrapper">
+        <span class="instructions_matrix-start">K = [</span>
+        <input type="text" name="euler2k1" class="euler2-k1">
+        <input type="text" name="euler2k2" class="euler2-k2">
+        <span class="instructions_matrix-end">]</span>
+      </div>
+    </div>
+
+    <div class="instructions_val-label">Euler3 Direction</div>
+    <div class="instructions_val-box">
+      <div class="instructions_matrix-wrapper">
+        <span class="instructions_matrix-start">K = [</span>
+        <input type="text" name="euler3k1" class="euler3-k1">
+        <input type="text" name="euler3k2" class="euler3-k2">
+        <span class="instructions_matrix-end">]</span>
+      </div>
+    </div>
+
+    <button class="applyKs btn btn-primary quadrotor-btn">Apply K Values</button>
+    <button class="start-button btn btn-primary quadrotor-btn">Start</button>
+    <button class="stop-button btn btn-primary quadrotor-btn">Stop</button>
+    <button class="reset-button btn btn-primary quadrotor-btn">Reset position</button>
+
+    <div></div>
+
+    <div class="instructions_val-label">Desired Position X</div>
+    <div class="instructions_val-box">
+      <div>
+        <div class="instructions_key-wrapper">
+          <div class="instructions_key">W</div>
+          <span class="instructions_key-value">+</span>
+        </div>
+      </div>
+      <div>
+        <div class="instructions_key-wrapper">
+          <div class="instructions_key">S</div>
+          <span class="instructions_key-value">--</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="instructions_val-label">Desired Position Y</div>
+    <div class="instructions_val-box">
+      <div>
+        <div class="instructions_key-wrapper">
+          <div class="instructions_key">A</div>
+          <span class="instructions_key-value">+</span>
+        </div>
+      </div>
+      <div>
+        <div class="instructions_key-wrapper">
+          <div class="instructions_key">D</div>
+          <span class="instructions_key-value">--</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="instructions_val-label">Desired Position Z</div>
+    <div class="instructions_val-box">
+      <div>
+        <div class="instructions_key-wrapper">
+          <div class="instructions_key">Q</div>
+          <span class="instructions_key-value">+</span>
+        </div>
+      </div>
+      <div>
+        <div class="instructions_key-wrapper">
+          <div class="instructions_key">E</div>
+          <span class="instructions_key-value">--</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div id='manual-control-quadrotor-container'></div>
+
+<script src="/assets/js/quadrotor/manualSetup.js"></script>

@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+    <title>Jake Dluhy | Quadrotor Demo</title>
+    <meta name="description" content="Sustayn rescues great food from being thrown out and  connects it with good homes that want to eat it!  Sustayn your health, your planet, and your community
+">
+    <link type="text/css" rel="stylesheet" href="/assets/css/materialdesignicons.min.css" media="screen,projection">
+    <link type="text/css" rel="stylesheet" href="/assets/css/app.css" media="screen,projection">
+    <link href='https://fonts.googleapis.com/css?family=Raleway:600' rel='stylesheet' type='text/css'>
+    <link rel="canonical" href="http://jakedluhy.com/portfolio/quadrotor/optimal-control-documentation/">
+
+    <!-- Favicons -->
+    <link rel="apple-touch-icon" sizes="57x57" href="/assets/images/favicons/apple-touch-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="/assets/images/favicons/apple-touch-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="/assets/images/favicons/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="/assets/images/favicons/apple-touch-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="/assets/images/favicons/apple-touch-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="/assets/images/favicons/apple-touch-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="/assets/images/favicons/apple-touch-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="/assets/images/favicons/apple-touch-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/images/favicons/apple-touch-icon-180x180.png">
+    <link rel="icon" type="image/png" href="/assets/images/favicons/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="/assets/images/favicons/favicon-194x194.png" sizes="194x194">
+    <link rel="icon" type="image/png" href="/assets/images/favicons/favicon-96x96.png" sizes="96x96">
+    <link rel="icon" type="image/png" href="/assets/images/favicons/android-chrome-192x192.png" sizes="192x192">
+    <link rel="icon" type="image/png" href="/assets/images/favicons/favicon-16x16.png" sizes="16x16">
+    <link rel="manifest" href="/assets/images/favicons/manifest.json">
+    <link rel="mask-icon" href="/assets/images/favicons/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="msapplication-TileImage" content="/assets/images/favicons/mstile-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+
+    <!-- Google Analytics -->
+    <!-- <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-73960106-1', 'auto');
+      ga('send', 'pageview');
+
+    </script> -->
+</head>
+
+<body>
+    <header>
+        <div class="navbar-wrapper">
+  <nav class="white grey-text text-darken-4">
+    <ul id="slide-out" class="side-nav">
+      <li class="side-nav-item">
+        <a href="/" class="navbar-text side-nav-link">
+          <i class="mdi mdi-home"></i>HOME
+        </a>
+      </li>
+      <li class="side-nav-item">
+        <a href="/portfolio" class="navbar-text side-nav-link">
+          <i class="mdi mdi-laptop-mac"></i>Portfolio
+        </a>
+      </li>
+    </ul>
+    <a class="brand-logo" href="/"><div class="logo-container"><img src="/assets/images/jakedluhy-logo.svg" class="logo-image"><span class="logo-text">Jake Dluhy</span></div></a>
+    <ul class="right hide-on-med-and-down">
+      <li><a href="/portfolio" class="navbar-text">Portfolio</a></li>
+    </ul>
+    <a href="#" data-activates="slide-out" class="hamburger-icon button-collapse right grey-text text-darken-4"><i class="mdi mdi-menu"></i></a>
+  </nav>
+</div>
+
+    </header>
+    <main class="quadrotor-documentation">
+      <div class="container">
+  <div class="section-container"><h3>4 Optimal Control</h3></div>
+
+  <div class="section-container"><h5><a href="/portfolio/quadrotor/optimal-control">Optimal Control Animation</a></h5></div>
+
+  <div class="section-container">
+    <h4>4.1 Section Overview</h4>
+    <p>
+      We saw in the last chapter that control of a quadrotor is implemented using state feedback, and state feedback is implemented through discretionary choice in values called gains. We also saw that it can be quite difficult choosing the right gains to produce the desired behavior. Choosing two values without any true meaning behind them can be quite difficult.<br>
+      <br>
+      In this chapter, we will see how the use of 'optimal control' can help us select gains in a more intuitive way. The premise behind optimal control is creating a cost function for the path of the quadrotor, that can then be minimized. Gains will be discovered that result in the minimum cost, and these can be used as our choices.<br>
+      <br>
+      Finally, we will review the method of changing the cost function, and how that will result in a more intuitive way of picking gains, instead of random shots in the dark.
+    </p>
+  </div>
+
+  <div class="section-container">
+    <h4>4.2 The Cost Function</h4>
+    <p>
+      Recall that our state can be represented by errors in the actual state in relation to the desired state. Additionally, remember that for each time step we choose inputs that control how the quadrotor moves. We can think of the state errors as a cost of being away from the desired position, and inputs as a cost of putting power/energy into the system. If we wanted to define a function that quantifies the total cost at a single time step, it could be written like this:
+      <span class="equations">
+        $$
+          C_1 = {(x(i))^T}Q{(x(i))} + {(u(i))^T}R{(u(i))}
+        $$
+      </span>
+      Where Q is a square matrix the size of the state, and R is a square matrix the size of the inputs. These are cost matrices, that represent the cost that we want to attribute to each individual element. These are what we choose. We could sum up these costs for each time step from now until a certain point in time and arrive at the a total cost for a path.
+      <span class="equations">
+        $$
+          C_{total} = \frac{1}{2}x(n)^TQ_{final}x(n) + \frac{1}{2}\sum\limits_{i=0}^{n-1} {x(i)^T}Q{(x(i))} + {u(i)^T}R{(u(i))}
+        $$
+      </span>
+      Now, remember our goal is to minimize this function. To do that, we must use the discrete time algebraic riccotti equation.
+    </p>
+  </div>
+
+  <div class="section-container">
+    <h4>4.3 Discrete Time Algebraic Riccotti Equation</h4>
+    <p>
+      The discrete time algebraic riccotti equation is a mathematical solution to the minimization problem presented above. Given the constratints of the system,
+      <span class="equations">
+        $$
+          x(i+1) = Ax(i) + Bu(i) \text{ for all i } \epsilon \ \{0,...,n-1\}\\
+          x(0) = x_0
+        $$
+      </span>
+      And the summation function defined above, the discrete time algebraic riccotti equation gives a solution in terms of the state matrices A and B, as well as the cost matrices Q and R.
+      <span class="equations">
+        \begin{gather}
+        K_{ss} = (R+B^TP_{ss}B)^{-1}(B^TP_{ss}A)\\
+        P_{ss} = Q + A^TP_{ss}A - (A^TP_{ss}B)(R + B^TP_{ss}B)^{-1}(B^TP_{ss}A)\\
+        \end{gather}
+      </span>
+      From this, we see that we have a solution for the gains that control the system. By applying DARE to each of our state space systems, we are able to optimally solve for the best K matrices.
+    </p>
+  </div>
+
+  <div class="section-container">
+    <h4>4.4 Picking Q's and R's - <a href="/portfolio/quadrotor/optimal-control">Animation</a></h4>
+    <p>
+      Of course, in order to do this, we must select the Q and R matrices that we input. This is how we design a control system, and the process goes as follows. Take for instance the outer loop x controller. Remember that the states for this system are x position error and x velocity error. The inputs for this system is the pitch angle of the quadrotor.<br>
+      <br>
+      Now if all we cared about was getting to the goal as fast as possible, we could set the first value in the Q matrix to be very high, as shown below.
+      <span class="equation">
+        $$
+          Q = \begin{bmatrix}1000&0\\0&1\end{bmatrix}
+        $$
+      </span>
+      However this would cause two problems. The first is that in order to get to that position, the model would command very high input values. Remember these inputs are the pitch angle of the quadrotor; if they get too high, such as above 90 degrees, then the quadrotor could flip, causing catastrophic failure. Even if the quadrotor didn't flip, this choice in gains could still cause a problem.<br>
+      <br>
+      Although we are getting to the desired position very fast, we are telling our model that we don't care about errors in velocity at all. Therefore the quadrotor will zip to the position... and promptly overshoot it. At this point it will start to move back... and overshoot again.<br>
+      <br>
+      The key to picking gains is to strike a balance that results in the behavior we want. The best way to do this is via simulation that shows the model behave as it is expected to. Play around with choosing different values, and see what happens!
+    </p>
+  </div>
+
+
+  <div class="footer-container">
+    <button class="btn btn-primary quadrotor-btn previous"><a class="prev-button" href="/portfolio/quadrotor/manual-control-documentation">Previous Lesson</a></button>
+    <button class="btn btn-primary quadrotor-btn next"><a class="next-button" href="/portfolio/quadrotor/target-game-documentation">Next Lesson</a></button>
+  </div>
+</div>
+    </main>
+
+    <link href='https://fonts.googleapis.com/css?family=Libre+Baskerville' rel='stylesheet' type='text/css'>
+    <script type="text/javascript" src='/assets/js/jquery.js'></script>
+    <script type="text/javascript" src='/assets/js/materialize.js'></script>
+    <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+</body>
+</html>

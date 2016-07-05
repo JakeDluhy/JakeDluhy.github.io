@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+    <title>Jake Dluhy | Quadrotor Demo</title>
+    <meta name="description" content="Sustayn rescues great food from being thrown out and  connects it with good homes that want to eat it!  Sustayn your health, your planet, and your community
+">
+    <link type="text/css" rel="stylesheet" href="/assets/css/materialdesignicons.min.css" media="screen,projection">
+    <link type="text/css" rel="stylesheet" href="/assets/css/app.css" media="screen,projection">
+    <link href='https://fonts.googleapis.com/css?family=Raleway:600' rel='stylesheet' type='text/css'>
+    <link rel="canonical" href="http://jakedluhy.com/portfolio/quadrotor/">
+
+    <!-- Favicons -->
+    <link rel="apple-touch-icon" sizes="57x57" href="/assets/images/favicons/apple-touch-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="/assets/images/favicons/apple-touch-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="/assets/images/favicons/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="/assets/images/favicons/apple-touch-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="/assets/images/favicons/apple-touch-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="/assets/images/favicons/apple-touch-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="/assets/images/favicons/apple-touch-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="/assets/images/favicons/apple-touch-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/images/favicons/apple-touch-icon-180x180.png">
+    <link rel="icon" type="image/png" href="/assets/images/favicons/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="/assets/images/favicons/favicon-194x194.png" sizes="194x194">
+    <link rel="icon" type="image/png" href="/assets/images/favicons/favicon-96x96.png" sizes="96x96">
+    <link rel="icon" type="image/png" href="/assets/images/favicons/android-chrome-192x192.png" sizes="192x192">
+    <link rel="icon" type="image/png" href="/assets/images/favicons/favicon-16x16.png" sizes="16x16">
+    <link rel="manifest" href="/assets/images/favicons/manifest.json">
+    <link rel="mask-icon" href="/assets/images/favicons/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="msapplication-TileImage" content="/assets/images/favicons/mstile-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+
+    <!-- Google Analytics -->
+    <!-- <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-73960106-1', 'auto');
+      ga('send', 'pageview');
+
+    </script> -->
+</head>
+
+<body>
+    <header>
+        <div class="navbar-wrapper">
+  <nav class="white grey-text text-darken-4">
+    <ul id="slide-out" class="side-nav">
+      <li class="side-nav-item">
+        <a href="/" class="navbar-text side-nav-link">
+          <i class="mdi mdi-home"></i>HOME
+        </a>
+      </li>
+      <li class="side-nav-item">
+        <a href="/portfolio" class="navbar-text side-nav-link">
+          <i class="mdi mdi-laptop-mac"></i>Portfolio
+        </a>
+      </li>
+    </ul>
+    <a class="brand-logo" href="/"><div class="logo-container"><img src="/assets/images/jakedluhy-logo.svg" class="logo-image"><span class="logo-text">Jake Dluhy</span></div></a>
+    <ul class="right hide-on-med-and-down">
+      <li><a href="/portfolio" class="navbar-text">Portfolio</a></li>
+    </ul>
+    <a href="#" data-activates="slide-out" class="hamburger-icon button-collapse right grey-text text-darken-4"><i class="mdi mdi-menu"></i></a>
+  </nav>
+</div>
+
+    </header>
+    <main class="quadrotor-documentation">
+      <div class="container">
+  <div class="col-md-6">
+    <h1 class="center-align">Controlling a Quadrotor</h1>
+    <h3 class="center-align">Jake Dluhy</h3>
+    <h5 class="center-align">A Math 198: Hypergraphics Project</h4>
+
+    <div class="abstract-container">
+      <h4 class="center-align">Abstract</h2>
+      <p class="abstract-text">In this instructional webpage, we will explore each of the aspects that go into controlling a quadrotor. By starting with the basics of kinematics, progressing through dynamics, and into the world of state space modeling, we will build up the basic knowledge that goes into quadrotor design. In the end, we will see everything put together into a game that will test your control engineering skills!</p>
+    </div>
+  </div>
+
+  <div class="index-chapter-wrapper">
+    <a href="/portfolio/quadrotor/kinematics-documentation">1. Kinematics</a>
+    <div class="chapter-description">The kinematics of motion. Changing coordinate frames from one to the next, including translations and rotations. After learning the lesson, there will be an interactive animation to move the quadrotor, visualizing it from the reference frame of the environment, as well as the reference frame of the quadrotor itself.</div>
+  </div>
+
+  <div class="index-chapter-wrapper">
+    <a href="/portfolio/quadrotor/dynamics-documentation">2. Dynamics</a>
+    <div class="chapter-description">The dynamics of a quadrotor. How forces and torques are applied on the body, and how the quadrotor responds appropriately. At the end of the lesson, try to apply forces to each quadrotor blade and attempt to manually control the quadrotor. It might be harder than you think!</div>
+  </div>
+
+  <div class="index-chapter-wrapper">
+    <a href="/portfolio/quadrotor/manual-control-documentation">3. Manual Control</a>
+    <div class="chapter-description">Controlling a quadrotor by positioning a desired position, and manually choosing gains. At the end, see how quadrotor controls work, setting a specified destination objective for the quadrotor to fly to.</div>
+  </div>
+
+  <div class="index-chapter-wrapper">
+    <a href="/portfolio/quadrotor/optimal-control-documentation">4. Optimal Control</a>
+    <div class="chapter-description">A better method than manually choosing gains is deciding how to minimize the cost for the quadrotor. See how these costs are derived, and how changing the weights applied to each one can speed up or slow down a quadrotor. Be carefull not to pick too aggressively, in case this causes the quadrotor to fail!</div>
+  </div>
+
+  <div class="index-chapter-wrapper">
+    <a href="/portfolio/quadrotor/target-game-documentation">5. The Target Game</a>
+    <div class="chapter-description">The final chapter is just the animation for the target game. This will test your skills as a control engineer. Five targets are placed within the arena. Choose the costs you think will make the quadrotor perform best, and see if you can set a new personal record!</div>
+  </div>
+</div>
+    </main>
+
+    <link href='https://fonts.googleapis.com/css?family=Libre+Baskerville' rel='stylesheet' type='text/css'>
+    <script type="text/javascript" src='/assets/js/jquery.js'></script>
+    <script type="text/javascript" src='/assets/js/materialize.js'></script>
+    <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+</body>
+</html>

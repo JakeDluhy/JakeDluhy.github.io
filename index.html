@@ -2,33 +2,61 @@
 layout: default
 ---
 <div class="frontpage">
-  <div class="section splash-section">
+  <div class="index-image-container" image-container="true">
+    <div class="opacity-shield">
+    
+      
+    </div>
+  </div>
+
+  <div class="info-container container container-large">
+    <div class="welcome-info">
+      <h1 class="intro-text amber-text text-darken-1">
+        Developer, Entrepreneur, Foodie, Athlete, Hobbyist & Traveler
+      </h1>
+    </div>
+
+    <div class="contact-me_container">
+      <div class="contact-me">
+        <div class="contact-me_icon contact-me_icon--icon1 amber darken-3">
+          <a class="contact-me_icon-link grey-text text-lighten-3" href="https://github.com/{{ site.owner.github.username }}" target="_blank">
+            <i class="mdi mdi-github-circle"></i>
+          </a>
+        </div>
+        <div class="contact-me_icon contact-me_icon--icon2 amber darken-3">
+          <a class="contact-me_icon-link grey-text text-lighten-3" href="https://linkedin.com/in/{{ site.owner.linkedin.username }}" target="_blank">
+            <i class="mdi mdi-linkedin"></i>
+          </a>
+        </div>
+        <div class="contact-me_icon contact-me_icon--icon3 amber darken-3">
+          <a class="contact-me_icon-link grey-text text-lighten-3" href="https://twitter.com/{{ site.owner.twitter.username }}" target="_blank">
+            <i class="mdi mdi-twitter"></i>
+          </a>
+        </div>
+        <div class="contact-me_icon contact-me_icon--icon4 amber darken-3">
+          <a class="contact-me_icon-link grey-text text-lighten-3" href="{{ site.owner.facebook.url }}" target="_blank">
+            <i class="mdi mdi-facebook-box"></i>
+          </a>
+        </div>
+        <div class="contact-me_icon contact-me_icon--icon5 amber darken-3">
+          <a class="contact-me_icon-link grey-text text-lighten-3" href="mailto:{{ site.owner.email }}" target="_blank">
+            <i class="mdi mdi-email"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+  <!-- <div class="section splash-section">
     <div class="opacity-shield">
       <h4 class="hero-header center-align white-text">Amazing food doesn't have to break the bank</h4>
       <div class="row">
-        <div class="col s12 m4 offset-m4">
+        <div class="col s12 m6 offset-m4">
           <p class="center-align white-text">
             We're rescuing great food from being chucked and getting it to you at discounted prices. If you're intereted in learning more join our mailing list!
           </p>
           <div class="mailchimp-signup">
-            <!-- Begin MailChimp Signup Form -->
-            <div id="mc_embed_signup">
-            <form action="//sustayn.us12.list-manage.com/subscribe/post?u=dda607170b72014ae5352ce6c&amp;id=d96f2a0927" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
-              <div id="mc_embed_signup_scroll">
-                <div class="mc-field-group">
-                  <input type="email" placeholder="Email" value="" name="EMAIL" class="required email" id="mce-EMAIL">
-                </div>
-                <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
-                <div style="position: absolute; left: -5000px;" aria-hidden="true">
-                  <input type="text" name="b_dda607170b72014ae5352ce6c_d96f2a0927" tabindex="-1" value="">
-                </div>
-                <div class="clear btn-wrapper">
-                  <input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="btn green darken-3">
-                </div>
-              </div>
-            </form>
-            </div>
-            <!--End mc_embed_signup-->
+
           </div>
         </div>
       </div>  
@@ -38,20 +66,20 @@ layout: default
     <div class="section">
       <h4 class="hero-header center-align">Did you know?</h4>
       <div class="row">
-        <div class="col s12 m4 stat-info-wrapper valign-wrapper">
+        <div class="col s12 m6 stat-info-wrapper valign-wrapper">
           <div class="stat-info valign">
             <span class="stat-display center-align">40%</span>
             <div class="food-icons">
               <i class="mdi mdi-barley"></i>
               <i class="mdi mdi-barley"></i>
-              <i class="mdi mdi-barley deep-orange-text darken-2"></i>
+              <i class="mdi mdi-barley deep-orange-text darken-3"></i>
               <i class="mdi mdi-barley"></i>
-              <i class="mdi mdi-barley deep-orange-text darken-2"></i>
+              <i class="mdi mdi-barley deep-orange-text darken-3"></i>
             </div>
             <p class="stat-text center-align"> of food produced in the US goes uneaten</p>
           </div>
         </div>
-        <div class="col s12 m4 stat-info-wrapper valign-wrapper">
+        <div class="col s12 m6 stat-info-wrapper valign-wrapper">
           <div class="stat-info garbage-stat-info valign">
             <span class="stat-display center-align">43 billion</span>
             <p class="stat-text center-align food-pounds-stat white-text"> pounds of food is thrown out from supermarkets</p>
@@ -63,7 +91,7 @@ layout: default
             <div class="people-icons">
               <i class="mdi mdi-account"></i>
               <i class="mdi mdi-account"></i>
-              <i class="mdi mdi-account deep-orange-text darken-2"></i>
+              <i class="mdi mdi-account deep-orange-text darken-3"></i>
               <i class="mdi mdi-account"></i>
               <i class="mdi mdi-account"></i>
               <i class="mdi mdi-account"></i>
@@ -122,25 +150,7 @@ layout: default
       </p>
       <div class="row">
         <div class="col s12 m6 offset-m3">
-          <!-- Begin MailChimp Signup Form -->
-          <div id="mc_embed_signup">
-          <form action="//sustayn.us12.list-manage.com/subscribe/post?u=dda607170b72014ae5352ce6c&amp;id=d96f2a0927" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
-            <div id="mc_embed_signup_scroll">
-              <div class="mc-field-group input-field">
-                <input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL2">
-                <label for="mce-EMAIL2" class="bottom-signup">Email</label>
-              </div>
-              <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
-              <div style="position: absolute; left: -5000px;" aria-hidden="true">
-                <input type="text" name="b_dda607170b72014ae5352ce6c_d96f2a0927" tabindex="-1" value="">
-              </div>
-              <div class="clear btn-wrapper">
-                <input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="btn green darken-3">
-              </div>
-            </div>
-          </form>
-          </div>
-          <!--End mc_embed_signup-->
+
         </div>
       </div>
       <p>
@@ -163,4 +173,4 @@ layout: default
       </p>
     </div>
   </div>
-</div>
+</div> -->

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+{% include head.html %}
+<body>
+    <header>
+        {% include header.html %}
+    </header>
+
+    <script src="/assets/js/vendor/three.min.js"></script>
+    <script src="/assets/js/vendor/jquery-1.11.1.js"></script>
+    <script src="/assets/js/vendor/trackballControls.js"></script>
+    <script src="/assets/js/vendor/math.js"></script>
+    <script src="/assets/js/vendor/docCookies.js"></script>
+    <script src="/assets/js/vendor/sylvester.js"></script>
+    <script src="/assets/js/vendor/bootstrap.min.js"></script>
+
+    <script src="/assets/js/quadrotor/DisplayLibrary.js"></script>
+    <script src="/assets/js/quadrotor/mathEnvironment.js"></script>
+    <script src="/assets/js/quadrotor/Quadrotor.js"></script>
+    <script src="/assets/fonts/gentilis_bold.typeface.js"></script>
+
+    <main>
+        {{ content }}
+    </main>
+   <!--  <footer class="page-footer no-margin __top green darken-3">
+        {% include footer.html %}
+    </footer> -->
+    <script type="text/javascript" src='{{ "/assets/js/jquery.js" | prepend: site.baseurl }}'></script>
+    <script type="text/javascript" src='{{ "/assets/js/materialize.js" | prepend: site.baseurl }}'></script>
+</body>
+</html>

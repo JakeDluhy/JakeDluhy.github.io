@@ -3,6 +3,8 @@ body {
   flex-direction: column;
 
   min-height: 100vh;
+
+  background-color: rgb(22,22,22);
 }
 main {
   flex: 1 0 auto;
@@ -63,8 +65,6 @@ nav .brand-logo {
   display: inline-block;
 
   padding: 0;
-  padding-right: 10px;
-  padding-left: 10px;
 
   white-space: nowrap;
 
@@ -106,8 +106,9 @@ footer.page-footer {
   letter-spacing: -.003em;
 }
 
-h1, h2, h3, h4, h5, h6, p {
-  color: #333;
+h1, h2, h3, h4, h5, h6, p, div {
+  color: #fff;
+  -webkit-font-smoothing: antialiased;
 }
 
 $form-color: #2e7d32;
@@ -130,17 +131,22 @@ $form-color: #2e7d32;
   display: flex;
 
   height: 100%;
+  padding: 10px;
 
   align-items: center;
   .logo-image {
     height: 100%;
   }
-  .logo-text {
-    font-family: 'Quicksand', 'Roboto', 'sans-serif';
-    font-size: 32px;
+}
+.logo-text {
+  font-family: 'Raleway', 'Roboto', 'sans-serif';
+  font-size: 32px;
 
-    margin-left: 10px;
-  }
+  margin-left: 10px;
+
+  text-transform: uppercase;
+
+  color: #333;
 }
 
 
