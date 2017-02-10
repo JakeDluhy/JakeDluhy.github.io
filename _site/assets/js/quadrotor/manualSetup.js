@@ -56,8 +56,8 @@ $(document).ready(function() {
 
   //Handle translations and rotations
   applyKs.click(function(event) {
-    var xdirk1 = Number($('.xdir-k1').val());
-    var xdirk2 = Number($('.xdir-k2').val());
+    var xdirk1 = -Number($('.xdir-k1').val());
+    var xdirk2 = -Number($('.xdir-k2').val());
 
     var ydirk1 = Number($('.ydir-k1').val());
     var ydirk2 = Number($('.ydir-k2').val());
