@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html>
-{% include head.html %}
+<head>
+    {% include head.html %}
+</head>
 <body>
     <header>
         {% include header.html %}
@@ -8,9 +10,7 @@
     <main>
         {{ content }}
     </main>
-   <!--  <footer class="page-footer no-margin __top green darken-3">
-        {% include footer.html %}
-    </footer> -->
+
     <script type="text/javascript" src='{{ "/assets/js/jquery.js" | prepend: site.baseurl }}'></script>
     <script type="text/javascript" src='{{ "/assets/js/materialize.js" | prepend: site.baseurl }}'></script>
     <script type="text/javascript" src='{{ "/assets/js/jakedluhy.js" | prepend: site.baseurl }}'></script>
