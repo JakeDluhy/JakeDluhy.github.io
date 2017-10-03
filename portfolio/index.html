@@ -18,19 +18,24 @@ icon: 'library-books'
         <div class="col s12">
           <h4 class="project-header">Metamason Software</h4>
           <div class="tag-container">
-            <div class="tag frontend">React</div>
+            <div class="tag frontend">React/Redux</div>
             <div class="tag frontend">Electron</div>
+            <div class="tag frontend">THREE.js</div>
+            <div class="tag frontend">C++</div>
             <div class="tag backend">Ruby on Rails</div>
             <div class="tag backend">JSON API</div>
             <div class="tag backend">Node.js</div>
             <div class="tag">Project Management</div>
-            <div class="tag">Startups</div>
+            <div class="tag">Startup</div>
           </div>
           <p class="project-description">
             Metamason is a startup that is creating customized CPAP masks for people suffering from sleep apnea. We do this by scanning the patient's face, uploading that scan to our servers, and using a proprietary process to turn the scan into a mask.
           </p>
           <p class="project-description">
-            As one of the first three developers working at Metamason, I am responsible for creating the software that is integral to the success of the company. We are running a complicated technology stack, using React and Electron to build for both web applications and a Windows application. Our Windows application uses the RealSense 3D camera to allow clinicians to scan patients. Our API server runs Ruby on Rails utilizing JSON API and we're using Node.js to process scans and turn them into the manufacturing files to print mask molds.
+            As one of the first three developers working at Metamason, I was responsible for creating the software that is integral to the success of the company. Metamason runs a complicated technology stack, using React, Redux, Rxjs and Electron to build for both web applications and a Windows application. The Windows application uses the RealSense 3D camera to allow clinicians to scan patients, using node-ffi with a C++ dll that is able to access the camera.
+          </p>
+          <p class="project-description">
+            After scanning, the scan is reconstructed on the tablet and the result displayed to the user using THREE.js. This allows the user to verify that the scan is accurate and either accept or reject it as too low quality. Scans are then uploaded to a cloud storage service and logged within the database through an API server. The API server runs Ruby on Rails utilizing JSON API and we're using Node.js to process scans and turn them into the manufacturing files to print mask molds.
           </p>
         </div>
       </div>
