@@ -31,6 +31,6 @@ sass:
   sass_dir: _sass
   style: compressed
 permalink: "/article/:title"
-gems:
+plugins:
   - jekyll-paginate
 
